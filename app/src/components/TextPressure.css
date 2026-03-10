@@ -1,0 +1,32 @@
+.text-pressure {
+  width: 100%;
+  position: relative;
+  cursor: default;
+  user-select: none;
+}
+
+.text-pressure__title {
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.text-pressure--flex .text-pressure__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-pressure--stroke span {
+  position: relative;
+}
+
+.text-pressure--stroke span::after {
+  content: attr(data-char);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: transparent;
+  z-index: -1;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: currentColor;
+}

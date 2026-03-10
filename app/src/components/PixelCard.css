@@ -1,0 +1,43 @@
+.pixel-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.pixel-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.pixel-card__grid {
+  position: absolute;
+  inset: 0;
+}
+
+.pixel-card__block {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.pixel-card__label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  z-index: 3;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .pixel-card__label {
+    font-size: 16px;
+  }
+}
